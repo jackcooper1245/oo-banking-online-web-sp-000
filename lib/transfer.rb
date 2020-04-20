@@ -1,6 +1,6 @@
 require 'memoize'
- include 'memoize'
 class Transfer
+  include 'memoize'
 
 attr_accessor :status, :sender, :receiver, :amount, :bank_account
 
