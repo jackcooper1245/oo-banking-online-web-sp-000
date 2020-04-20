@@ -1,6 +1,7 @@
 class Transfer
 
 attr_accessor :status, :sender, :receiver, :amount, :bank_account
+
 @@transfers = 0
 
 def initialize(sender, receiver, amount)
@@ -8,6 +9,8 @@ def initialize(sender, receiver, amount)
 @amount = amount
 @sender = sender
 @receiver = receiver
+@@transfers += 1
+
 end
 
 def valid?
