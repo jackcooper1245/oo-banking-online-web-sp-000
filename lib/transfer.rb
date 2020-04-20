@@ -21,7 +21,8 @@ def execute_transaction
   define_singleton_method(:execute_transaction){}
 elsif !valid?
   @status = "rejected"
-  puts "Transaction rejected. Please check your account balance."
+  return "Transaction rejected. Please check your account balance."
+
 end
 end
 
