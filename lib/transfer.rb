@@ -1,3 +1,5 @@
+require 'memoize'
+
 class Transfer
 
 attr_accessor :status, :sender, :receiver, :amount, :bank_account
@@ -18,12 +20,8 @@ def execute_transaction
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
-elsif !valid?
-  return "Transaction rejected. Please check your account balance."
-  status = "rejected"
 end
-end
-
+memoize :execute_transaction
 
 
 end
