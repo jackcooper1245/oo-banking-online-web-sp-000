@@ -2,7 +2,7 @@ class Transfer
 
 attr_accessor :status
 
-def initialize(bank_account, amount = nil)
+def initialize(sender, receiver, amount = nil)
 @status = "pending"
 end
 
