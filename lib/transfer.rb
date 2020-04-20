@@ -18,7 +18,7 @@ def valid?
 end
 
 def execute_transaction
-  if @@transfers < 1
+  if @@transfers < 2
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
