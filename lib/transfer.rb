@@ -7,7 +7,6 @@ def initialize(sender, receiver, amount)
 @amount = amount
 @sender = sender
 @receiver = receiver
-
 end
 
 def valid?
@@ -20,7 +19,6 @@ def execute_transaction
   @receiver.balance += @amount
   @status = "complete"
   define_singleton_method(:execute_transaction) 
-
 end
 
 
