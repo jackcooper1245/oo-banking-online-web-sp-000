@@ -9,8 +9,6 @@ def initialize(sender, receiver, amount)
 @amount = amount
 @sender = sender
 @receiver = receiver
-@@transfers += 1
-
 end
 
 def valid?
@@ -18,10 +16,11 @@ def valid?
 end
 
 def execute_transaction
-  if @@transfers < 2
+  if @@transfers < 1
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
+  @@transfer += 1
 end
 end
 
