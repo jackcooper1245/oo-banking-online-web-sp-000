@@ -12,5 +12,8 @@ def deposit(number)
   @balance += number
 end
 
+def self.display_balance
+  @balance
+end
 
 end
