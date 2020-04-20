@@ -15,7 +15,7 @@ def valid?
 end
 
 def execute_transaction
-if self.!valid?
+if !valid?
   @status = "rejected"
   return "Transaction rejected. Please check your account balance."
 elsif @status == "pending"
@@ -23,6 +23,8 @@ elsif @status == "pending"
   @receiver.balance += @amount
   @status = "complete"
 end
+end
+
 
 def reverse_transfer
   if @status == "complete"
