@@ -18,7 +18,6 @@ def execute_transaction
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
-  define_singleton_method(:execute_transaction){}
 else 
   @status = "rejected"
   return "Transaction rejected. Please check your account balance."
