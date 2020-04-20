@@ -10,7 +10,7 @@ def initialize(sender, receiver, amount)
 end
 
 def valid?
-  bank_account.valid?
+  bank_account.valid? << self
 end
 
 end
