@@ -9,6 +9,8 @@ def initialize(sender, receiver, amount)
 @receiver = receiver
 end
 
-
+def valid?
+  bank_account.valid?
+end
 
 end
