@@ -15,7 +15,7 @@ def valid?
 end
 
 def execute_transaction
-if !valid?
+if !valid? && @status == "pending"
   @status = "rejected"
   return "Transaction rejected. Please check your account balance."
 elsif @status == "pending"
