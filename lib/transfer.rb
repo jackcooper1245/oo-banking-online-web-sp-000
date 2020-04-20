@@ -23,7 +23,6 @@ elsif !valid?
   @status = "rejected"
   return "Transaction rejected. Please check your account balance."
 end
-define_singleton_method(:execute_transaction){}
 end
 
 end
