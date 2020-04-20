@@ -1,6 +1,4 @@
-require 'memoize'
 class Transfer
-  include 'memoize'
 
 attr_accessor :status, :sender, :receiver, :amount, :bank_account
 
@@ -9,6 +7,7 @@ def initialize(sender, receiver, amount)
 @amount = amount
 @sender = sender
 @receiver = receiver
+
 end
 
 def valid?
@@ -20,8 +19,9 @@ def execute_transaction
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
+  define_singleton_method(:execute_transaction) 
+
 end
-memoize :execute_transaction
 
 
 end
