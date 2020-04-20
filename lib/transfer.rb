@@ -1,6 +1,6 @@
 class Transfer
 
-attr_accessor :status, 
+attr_accessor :status,
 #initialize
 def initialize(bank_account, bank_account, amount = nil)
 # can initialize a transfer
@@ -17,4 +17,3 @@ end
 
 
 end
-
