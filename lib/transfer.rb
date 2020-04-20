@@ -18,7 +18,7 @@ def execute_transaction
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
-  define_singleton_method(:execute_transaction) 
+  define_singleton_method(:execute_transaction)
 end
 
 
