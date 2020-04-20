@@ -15,11 +15,11 @@ def valid?
 end
 
 def execute_transaction
-  if @@ < 1
+  if @@transfers < 1
   @sender.balance -= @amount
   @receiver.balance += @amount
   @status = "complete"
-  @@transfer += 1
+  @@transfers += 1
 end
 end
 
