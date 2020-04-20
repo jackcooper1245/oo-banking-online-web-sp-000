@@ -14,8 +14,8 @@ def valid?
   @sender.valid? && @receiver.valid?
 end
 
-ef execute_transaction
-    if !self.valid?
+def execute_transaction
+    if !valid?
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     elsif @status == "pending"
